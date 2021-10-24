@@ -10,5 +10,6 @@ namespace PP2
     {
         public string weight { get; set; }
         public string height { get; set; }
+        public string sprite { get; set; }
     }
 }

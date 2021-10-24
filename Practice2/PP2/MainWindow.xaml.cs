@@ -44,7 +44,8 @@ namespace PP2
             Pokemon selecteditem = (Pokemon)lstbox.SelectedItem;
             using (var client = new HttpClient())
             {
-                string jsonDate=client
+                string jsonDate = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon/" + selecteditem).Result; 
+
             }
         } 
     }

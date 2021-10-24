@@ -35,19 +35,20 @@ namespace PP3
 
                     string jsonData = client.GetStringAsync(url).Result;
                     RandM api = JsonConvert.DeserializeObject<RandM>(jsonData);
-
                     foreach (Character item in api.results)
                     {
                         cbBox.Items.Add(item);
                     }
+
                 }
+                
             }
 
         }
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            RandM selecteditem = (RandM)cbBox.SelectedItem;
+            Character selecteditem = (Character)cbBox.SelectedItem;
             imgBox.Source = new BitmapImage(new Uri(selecteditem.image));
             lbName.Content = selecteditem.name;
         }

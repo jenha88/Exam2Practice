@@ -27,10 +27,10 @@ namespace PP2
             InitializeComponent();
             using (var client = new HttpClient())
             {
-                string jsonData = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon").Result;
-                List<string> Pokemon = JsonConvert.DeserializeObject<List<string>>(jsonData);
+                string jsonData = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon?offset=0&limit=1118").Result;
+                list call = JsonConvert.DeserializeObject<list>(jsonData);
 
-                foreach (var item in Pokemon)
+                foreach (var item in call.results)
                 {
                     lstbox.Items.Add(item);
                 }
@@ -38,16 +38,50 @@ namespace PP2
 
 
         }
-
-        private void lstbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        
+        private void btbFront_Click(object sender, RoutedEventArgs e)
         {
-            Pokemon selecteditem = (Pokemon)lstbox.SelectedItem;
-            using (var client = new HttpClient())
+            detail P = (detail)lstbox.SelectedItem;
+
+            using (var client= new HttpClient())
             {
-                string jsonDate = client.GetStringAsync("https://pokeapi.co/api/v2/pokemon/" + selecteditem).Result; 
+                string JJ = client.GetStringAsync(P.url).Result;
+                Pokemon PP = JsonConvert.DeserializeObject<Pokemon>(JJ);
+                image.Source = new BitmapImage(new Uri(PP.sprites.front_default));
+
 
             }
-        } 
+
+
+        }
+        private void btbBack_Click(object sender, RoutedEventArgs e)
+        {
+            detail P = (detail)lstbox.SelectedItem;
+            using (var client= new HttpClient())
+            {
+                string bb = client.GetStringAsync(P.url).Result;
+                Pokemon PP = JsonConvert.DeserializeObject<Pokemon>(bb);
+                image.Source = new BitmapImage(new Uri(PP.sprites.back_default));
+            }
+        }
+        //what happens when the user select a pokemon in the listbox 
+        private void lstbox_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            detail P = (detail)lstbox.SelectedItem;
+            using (var client = new HttpClient())
+            {
+
+                string JsonData = client.GetStringAsync(P.url).Result; //getting the url info from the class 
+                Pokemon PP = JsonConvert.DeserializeObject<Pokemon>(JsonData);
+                image.Source = new BitmapImage(new Uri(PP.sprites.front_default)); //pulls up the image from the class 
+                txtheight.Text = PP.height;
+                txtweight.Text = PP.weight;
+
+
+            }
+        }
+
+        
     }
 
 }

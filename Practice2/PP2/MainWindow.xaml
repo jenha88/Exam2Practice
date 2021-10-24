@@ -15,11 +15,11 @@
         <Label Content="weight" HorizontalAlignment="Left" Margin="244,90,0,0" VerticalAlignment="Top"/>
         <Label Content="height" HorizontalAlignment="Left" Margin="244,149,0,0" VerticalAlignment="Top"/>
         <Image x:Name="image" HorizontalAlignment="Left" Height="125" Margin="229,231,0,0" VerticalAlignment="Top" Width="149"/>
-        <Button x:Name="btbBack" Content="Back" HorizontalAlignment="Left" Margin="222,374,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btbFront" Content="Front" Margin="327,374,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <Button x:Name="btbBack" Content="Back" HorizontalAlignment="Left" Margin="222,374,0,0" VerticalAlignment="Top" Width="75" Click="btbBack_Click"/>
+        <Button x:Name="btbFront" Content="Front" Margin="327,374,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75" Click="btbFront_Click"/>
         <Label Content="Pokemon Generator" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" FontSize="45" FontFamily="Tw Cen MT Condensed Extra Bold" FontWeight="Bold" Foreground="White"/>
         <Label Content="Pokemon" HorizontalAlignment="Left" Margin="76,88,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <ListBox x:Name="lstbox" HorizontalAlignment="Left" Height="238" Margin="10,118,0,0" VerticalAlignment="Top" Width="199" SelectionChanged="lstbox_SelectionChanged">
+        <ListBox x:Name="lstbox" HorizontalAlignment="Left" Height="238" Margin="10,118,0,0" VerticalAlignment="Top" Width="199" MouseDoubleClick="lstbox_MouseDoubleClick" >
             <ListBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.5"/>
             </ListBox.Background>

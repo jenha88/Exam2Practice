@@ -1,0 +1,20 @@
+﻿<Window x:Class="PP3.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PP3"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="https://i.pinimg.com/originals/a8/ec/06/a8ec0697a5399d67899078d2632e1b75.png"/>
+        </Grid.Background>
+        <Label Content="Rick and Morty Generator" HorizontalAlignment="Left" Margin="129,27,0,0" VerticalAlignment="Top" FontSize="35" FontFamily="Showcard Gothic" Foreground="#FFF9F7F7"/>
+        <Label Content="Select a Character:" HorizontalAlignment="Left" Margin="40,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="53,143,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
+        <Image HorizontalAlignment="Left" Height="157" Margin="295,164,0,0" VerticalAlignment="Top" Width="170"/>
+        <Label x:Name="lbName" Content="" HorizontalAlignment="Left" Margin="322,117,0,0" VerticalAlignment="Top" Width="143"/>
+
+    </Grid>
+</Window>

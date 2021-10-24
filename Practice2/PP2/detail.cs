@@ -8,8 +8,13 @@ namespace PP2
 {
     public class detail
     {
-        public string url { get; set; }
         public string name { get; set; }
+        public string url { get; set; }
+      
 
+        public override string ToString()
+        {
+            return $"{name}";
+        }
     }
 }

@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v855-techi-nunoon-37a.jpg?w=800&amp;dpr=1&amp;fit=default&amp;crop=default&amp;q=65&amp;vib=3&amp;con=3&amp;usm=15&amp;bg=F4F4F3&amp;ixlib=js-2.2.1&amp;s=d179d8ef385bb05542d826f2fcc46203"/>
+        </Grid.Background>
+        <Label Content="Chuck Norris Jokes" HorizontalAlignment="Left" Margin="215,37,0,0" VerticalAlignment="Top" FontSize="45"/>
+        <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="105,171,0,0" VerticalAlignment="Top" Width="149" Height="30" />
+        <Button x:Name="btb" Content="Button" HorizontalAlignment="Left" Margin="139,289,0,0" VerticalAlignment="Top" Width="97" Height="33" Click="btb_Click"/>
+        <TextBox x:Name="txtbox" HorizontalAlignment="Left" Height="63" Margin="358,171,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="351">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+
     </Grid>
 </Window>

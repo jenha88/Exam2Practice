@@ -1,0 +1,29 @@
+﻿<Window x:Class="PP2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PP2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid Margin="0,0,-0.4,0">
+        <Grid.Background>
+            <ImageBrush ImageSource="https://wallpaperaccess.com/full/2143659.jpg"/>
+        </Grid.Background>
+        <TextBox x:Name="txtweight" HorizontalAlignment="Left" Height="23" Margin="240,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtheight" HorizontalAlignment="Left" Height="23" Margin="240,178,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Label Content="weight" HorizontalAlignment="Left" Margin="244,90,0,0" VerticalAlignment="Top"/>
+        <Label Content="height" HorizontalAlignment="Left" Margin="244,149,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="image" HorizontalAlignment="Left" Height="125" Margin="229,231,0,0" VerticalAlignment="Top" Width="149"/>
+        <Button x:Name="btbBack" Content="Back" HorizontalAlignment="Left" Margin="222,374,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btbFront" Content="Front" Margin="327,374,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="75"/>
+        <Label Content="Pokemon Generator" HorizontalAlignment="Left" Margin="48,10,0,0" VerticalAlignment="Top" FontSize="45" FontFamily="Tw Cen MT Condensed Extra Bold" FontWeight="Bold" Foreground="White"/>
+        <Label Content="Pokemon" HorizontalAlignment="Left" Margin="76,88,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
+        <ListBox x:Name="lstbox" HorizontalAlignment="Left" Height="238" Margin="10,118,0,0" VerticalAlignment="Top" Width="199" SelectionChanged="lstbox_SelectionChanged">
+            <ListBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </ListBox.Background>
+        </ListBox>
+
+    </Grid>
+</Window>

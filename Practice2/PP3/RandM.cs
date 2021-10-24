@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace PP3
 {
-    public class Character
+    public class RandM
     {
         public Info info { get; set; }
 
         public List<Character> results { get; set; }
 
-        public class C
+        public class Character
         {
             public int id { get; set; }
             public string name { get; set; }

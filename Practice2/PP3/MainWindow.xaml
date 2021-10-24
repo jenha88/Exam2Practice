@@ -13,7 +13,7 @@
         <Label Content="Rick and Morty Generator" HorizontalAlignment="Left" Margin="129,27,0,0" VerticalAlignment="Top" FontSize="35" FontFamily="Showcard Gothic" Foreground="#FFF9F7F7"/>
         <Label Content="Select a Character:" HorizontalAlignment="Left" Margin="40,117,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="53,143,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="ComboBox_SelectionChanged"/>
-        <Image HorizontalAlignment="Left" Height="157" Margin="295,164,0,0" VerticalAlignment="Top" Width="170"/>
+        <Image x:Name="imgBox" HorizontalAlignment="Left" Height="157" Margin="295,164,0,0" VerticalAlignment="Top" Width="170"/>
         <Label x:Name="lbName" Content="" HorizontalAlignment="Left" Margin="322,117,0,0" VerticalAlignment="Top" Width="143"/>
 
     </Grid>

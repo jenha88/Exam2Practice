@@ -25,6 +25,7 @@ namespace PP3
         public MainWindow()
         {
             InitializeComponent();
+            cbBox.Items.Clear();
             for (int i = 1; i <=34 ; i++)
             {
                 string url = $"https://rickandmortyapi.com/api/character?page={i}";
@@ -33,9 +34,9 @@ namespace PP3
                 {
 
                     string jsonData = client.GetStringAsync(url).Result;
-                    Character api = JsonConvert.DeserializeObject<Character>(jsonData);
+                    RandM api = JsonConvert.DeserializeObject<RandM>(jsonData);
 
-                    foreach (C item in api.results)
+                    foreach (Character item in api.results)
                     {
                         cbBox.Items.Add(item);
                     }
@@ -46,7 +47,9 @@ namespace PP3
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            RandM selecteditem = (RandM)cbBox.SelectedItem;
+            imgBox.Source = new BitmapImage(new Uri(selecteditem.image));
+            lbName.Content = selecteditem.name;
         }
     }
 }

@@ -7,6 +7,17 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Grid.Background>
+            <ImageBrush ImageSource="https://wallpaperaccess.com/full/1095260.png"/>
+        </Grid.Background>
+        <Label Content="GOT Quote Generator" HorizontalAlignment="Left" Margin="220,31,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
+        <Button x:Name="btb" Content="Quote" HorizontalAlignment="Left" Margin="59,155,0,0" VerticalAlignment="Top" Width="83" Height="23"/>
+        <TextBox x:Name="txtBox" HorizontalAlignment="Left" Height="213" Margin="422,159,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="310">
+            <TextBox.Background>
+                <SolidColorBrush Color="White" Opacity="0.5"/>
+            </TextBox.Background>
+        </TextBox>
+        <Button x:Name="btbExport" Content="Export" HorizontalAlignment="Left" Margin="224,157,0,0" VerticalAlignment="Top" Width="86" Height="23"/>
+
     </Grid>
 </Window>

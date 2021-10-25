@@ -23,6 +23,10 @@ namespace PP4
         public MainWindow()
         {
             InitializeComponent();
+            using (var client= new HttpClient())
+            {
+
+            }
         }
     }
 }

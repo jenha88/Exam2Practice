@@ -7,18 +7,19 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+
+
         <Grid.Background>
             <ImageBrush ImageSource="https://i.pinimg.com/originals/3e/98/e8/3e98e83e0862977c3bd9a79d178676f6.png"/>
         </Grid.Background>
         <Label Content="Game Generator" HorizontalAlignment="Left" Margin="389,22,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold" FontFamily="Gill Sans Ultra Bold Condensed" Foreground="#FFF6EBEB"/>
-        <ComboBox HorizontalAlignment="Left" Margin="60,93,0,0" VerticalAlignment="Top" Width="156" Height="29"/>
-        <ListBox HorizontalAlignment="Left" Height="263" Margin="335,124,0,0" VerticalAlignment="Top" Width="424">
+        <ComboBox x:Name="cbBox" HorizontalAlignment="Left" Margin="60,93,0,0" VerticalAlignment="Top" Width="156" Height="29" SelectionChanged="cbBox_SelectionChanged"/>
+        <ListBox x:Name="lstbox" HorizontalAlignment="Left" Height="263" Margin="335,124,0,0" VerticalAlignment="Top" Width="424" Grid.RowSpan="4" SelectionChanged="lstbox_SelectionChanged">
             <ListBox.Background>
                 <SolidColorBrush Color="White" Opacity="0.5"/>
             </ListBox.Background>
         </ListBox>
-        <Button x:Name="btbPush" Content="Push" HorizontalAlignment="Left" Margin="56,289,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btbExport" Content="Export" HorizontalAlignment="Left" Margin="163,289,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btbExport" Content="Export" HorizontalAlignment="Left" Margin="103,260,0,0" VerticalAlignment="Top" Width="75" Background="#FFD7A3BE" Click="btbExport_Click"/>
         <Label Content="Application" HorizontalAlignment="Left" Margin="70,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18" Foreground="#FFF3F3F3"/>
 
     </Grid>

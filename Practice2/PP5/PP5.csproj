@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{65D4C6D6-1A04-4FB6-AA70-ECBAAB7990F0}</ProjectGuid>
+    <ProjectGuid>{937CEABA-7294-46F1-B3A3-A75F157FD22B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PP4</RootNamespace>
-    <AssemblyName>PP4</AssemblyName>
+    <RootNamespace>PP5</RootNamespace>
+    <AssemblyName>PP5</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -66,7 +66,6 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="GOT.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
